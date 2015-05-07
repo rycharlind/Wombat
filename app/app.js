@@ -1,4 +1,4 @@
-angular.module('wombatApp', [])
+angular.module('wombatApp', ['components'])
   .controller('ComponentsController', function() {
     
     var components = this;
@@ -26,8 +26,8 @@ angular.module('wombatApp', [])
     
     components.icons = [];
     for (i in faicons) {
-		components.icons.push({class:'fa ' + faicons[i]}); 
-	};
+		  components.icons.push({class:'fa ' + faicons[i]}); 
+	   };
     
     components.addIcon = function() {
       todoList.todos.push({text:todoList.todoText, done:false});

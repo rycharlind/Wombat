@@ -1,0 +1,15 @@
+.toolbox { 
+  position:fixed;
+  top:5px;
+  right:5px;
+  width:200px;
+  height:500px;
+}
+.toolbox-title {
+  cursor:move;
+  padding:2px;
+  margin:2px;
+}
+.component {
+  z-index: 100;
+}

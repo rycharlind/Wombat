@@ -9,12 +9,22 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <!-- JQuery UI Theme - Smoothness -->
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css">
     
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
     
     <!-- My Main CSS -->
     <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Components CSS -->
+    <link rel="stylesheet" href="styles/components.css">
+
+    <!-- JQuery / Jquery UI -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
   
     <!-- Mondernizer -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -22,12 +32,9 @@
     <!-- Angular -->
     <script src="bower_components/angular/angular.min.js"></script>
 
-    <!-- JQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- App -->
+    <!-- App / Components -->
+    <script src="components.js"></script>
     <script src="app.js"></script>
-
 
   </head>
   <body>
@@ -35,18 +42,20 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
-    <div class='container-fluid' ng-controller='ComponentsController as components'>
-
-        <div class='row'>
-
-          <div class='col-md-1' ng-repeat='icon in components.icons'>
-			<i class='{{icon.class}}'></i>
-          </div>
-
-      </div>
+    <div id='main' class='container' style='border:1px solid #000; padding:20px;'>
 
     </div>
+
+    <!-- Angular Directive -->
+    <toolbox title='Icons'>
+      <div class='container-fluid' ng-controller='ComponentsController as components'>
+          <div class='row'>
+            <div class='col-md-1' ng-repeat='icon in components.icons'>
+               <i class='component {{icon.class}}'></i>
+            </div>
+        </div>
+      </div>
+    </toolbox>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
