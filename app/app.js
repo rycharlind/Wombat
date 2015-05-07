@@ -3,10 +3,31 @@ angular.module('wombatApp', [])
     
     var components = this;
     
-    components.icons = [
+    var faicons = [
+    	'fa-adjust',
+		'fa-adn',
+		'fa-align-center',
+		'fa-align-justify',
+		'fa-align-left',
+		'fa-align-right',
+		'fa-ambulance',
+		'fa-anchor',
+		'fa-android',
+		'fa-angellist',
+		'fa-angle-double-down',
+		'fa-angle-double-left',
+		'fa-angle-double-right'
+    ];
+    
+    components.todo = [
       {text:'learn angular', done:true},
       {text:'build an angular app', done:false}];
- 
+      
+    
+    components.icons = [];
+    for (i in faicons) {
+		components.icons.push({class:'fa ' + faicons[i]}); 
+	};
     
     components.addIcon = function() {
       todoList.todos.push({text:todoList.todoText, done:false});

@@ -10,6 +10,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+    
     <!-- My Main CSS -->
     <link rel="stylesheet" href="styles/main.css">
   
@@ -33,12 +36,12 @@
     <![endif]-->
 
 
-    <div class='container-fluid'>
+    <div class='container-fluid' ng-controller='ComponentsController as components'>
 
         <div class='row'>
 
-          <div class='col-md-1'>
-
+          <div class='col-md-1' ng-repeat='icon in components.icons'>
+			<i class='{{icon.class}}'></i>
           </div>
 
       </div>
